@@ -1,0 +1,18 @@
+/*body {
+  background-color: blue;
+}*/
+
+.container-fluid {
+  background-image: url("http://i.imgur.com/AMoaoW6.jpg");
+  height: 100vh;
+}
+
+#darth-maul {
+  height: 128px;
+  width: 128px;
+}
+
+#obi-wan {
+  height: 128px;
+  width: 128px;
+}
