@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   console.log("js loaded!");
 
-
 // --> song code here
 function playOnLoad () {
   let playing = true;
@@ -20,11 +19,22 @@ function playOnLoad () {
 }
 playOnLoad();
 //--> end song code
-
-
-
-// $('#x-wing').animate("slow","linear");
-
+//
+//
+//
+// --> x-wing animation here
+$(".start").on("click", function() {
+// $("#x-wing").animate({marginRight: "1800px"}); 
+$("#x-wing").fadeIn();
+  $("#x-wing").animate({"marginLeft":"2000px"}, 3000, "swing", function() {
+    $("#x-wing").fadeOut();
+  });
+});
+// --> end x-wing code
+//
+//
+//
+// --> player move code
 let isStart = false;
 
 $(".start").on("click", function() {
@@ -44,7 +54,8 @@ $(".start").on("click", function() {
     });
   }
 });
-
+//
+// --> end player move code
 
 
 
@@ -80,16 +91,7 @@ $(".start").on("click", function() {
 
 
 
-// --> x-wing animation -->
 
-$(".start").on("click", function() {
-  // $("#x-wing").animate({marginRight: "1800px"}); 
-// while (badLoop === true) {
-$("#x-wing").fadeIn();
-  $("#x-wing").animate({"margin-left":"1500px"}, 3000, "swing", function() {
-    $("#x-wing").fadeOut();
-  });
-});
 
 
 
