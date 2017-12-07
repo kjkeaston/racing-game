@@ -48,9 +48,13 @@ $(document).ready(function() {
 // var clickA = $(document).bind('keydown',function(e){
 //        if(e.keyCode == 65) {
 //           myJedi.animate({marginLeft: "100px"});
-//         }});
+//        }});
 // return clickA
 
+
+let isStart = false;
+$(".start").on("click", function() {
+  if (isStart === false) {
 
 $(document).bind('keydown',function(pressA){
     if(pressA.keyCode === 65) {
@@ -68,6 +72,18 @@ $(document).bind('keydown',function(pressA){
         }
   }  
 });
+
+
+
+  }
+
+
+
+})
+
+
+
+
 
 // if ($("#darth-maul").css("marginLeft") === ("1300px")) {
 //   alert("Turned to the dark side");
