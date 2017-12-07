@@ -4,15 +4,65 @@
 
 .container-fluid {
   background-image: url("http://i.imgur.com/AMoaoW6.jpg");
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.sith {
+  position: absolute;
+  bottom: 120px;
 }
 
 #darth-maul {
-  height: 128px;
   width: 128px;
+  height: 128px;
+}
+
+.anakin {
+  position: absolute;
+  bottom: 120px;
+}
+
+#anakin{
+  width: 60px;
+  height: 100px;
+}
+
+.jedi {
+  position: absolute;
+  bottom: 0;
 }
 
 #obi-wan {
+  width: 128px;  
   height: 128px;
-  width: 128px;
 }
+
+.vaderdiv {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+}
+
+#vaderimg{
+  width: 700px;
+  height: 600px;
+}
+
+.yodadiv {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+}
+
+#yodaimg {
+  width: 512px;
+  height: 384px;
+}
+
+
+
+
+
+
+
+

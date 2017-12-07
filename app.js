@@ -54,18 +54,24 @@ $(document).ready(function() {
 
 $(document).bind('keydown',function(pressA){
     if(pressA.keyCode === 65) {
-      console.log("pressing A");
-      $('#darth-maul').animate({marginLeft: "+=100px"});}
-    else if (pressA.keyCode === 76) {
-      console.log("pressing L");
-      $('#obi-wan').animate({marginLeft: "+=100px"});}
-    });
+      $('#darth-maul').animate({marginLeft: "+=100px"});
+        if ($("#darth-maul").css("marginLeft") === ("1300px")) {
+          $(".vaderdiv").css({display: "block"});
+        }
 
-// $(document).bind('keydown',function(pressL){
-//     pressL.keyCode === 76;
-//     console.log("pressing L")
-//     $('#obi-wan').animate({marginLeft: "+=100px"});
-//   });
+
+
+    } else if (pressA.keyCode === 76) {
+      $('#obi-wan').animate({marginLeft: "+=100px"});
+        if ($('#obi-wan').css("marginLeft") === ("1300px")) {
+          $('.yodadiv').css({display: "block"});
+        }
+  }  
+});
+
+// if ($("#darth-maul").css("marginLeft") === ("1300px")) {
+//   alert("Turned to the dark side");
+// }
 
 
 
