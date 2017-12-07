@@ -6,6 +6,11 @@
   background-image: url("http://i.imgur.com/AMoaoW6.jpg");
   min-height: 100vh;
 }
+#stop {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 
 #x-wing {
   display: none;
