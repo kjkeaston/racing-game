@@ -3,22 +3,24 @@ $(document).ready(function() {
 
 
 
-var song = $("#theme-song"); 
+function playOnLoad () {
+  let playing = true;
 
-function playSong() { 
-    song.play(); 
-} 
+  $("#theme-song").get(0).play();
 
-function pauseSong() { 
-    song.pause(); 
+  $("#stop").on("click", function () {
+    console.log("stopper");
+  if (playing === true) {
+    $("#theme-song").get(0).pause();
+    return playing = false;
+  } else if (playOnLoad !== true) {
+    $("#theme-song").get(0).play();
+    return playing = true;
+  }});
+
 }
 
-  
-  $("#theme-song").get(0).play();
-  
-  $('#stop').on("click", function() {
-    $("#theme-song").get(0).pause();
-  });
+playOnLoad();
 
 
 // $('#x-wing').animate("slow","linear");
