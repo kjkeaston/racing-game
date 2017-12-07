@@ -3,54 +3,25 @@ $(document).ready(function() {
 
 
 
+var song = $("#theme-song"); 
+
+function playSong() { 
+    song.play(); 
+} 
+
+function pauseSong() { 
+    song.pause(); 
+}
+
+  
+  $("#theme-song").get(0).play();
+  
+  $('#stop').on("click", function() {
+    $("#theme-song").get(0).pause();
+  });
 
 
-
-// window.addEventListener("keydown", function (event) {
-//   if (event.defaultPrevented) {
-//     return; // Do nothing if the event was already processed
-//   }
-//   switch (event.key) {
-//     case "a":
-//       // function for moving sith
-//       $('#darth-maul').animate({marginLeft: "100px"});
-//       console.log("sith")
-//       break;
-//     case "l":
-//       // function for moving jedi
-//       console.log("jedi")
-//       break;
-//     default:
-//       return; // Quit when this doesn't handle the key event.
-//   }
-//   // Cancel the default action to avoid it being handled twice
-//   event.preventDefault();
-// }, true);
-
-// keyClick = [65, 76]
-
-
-
-// var mySith = $('#darth-maul');
-// $(document).bind('keydown',function(e){
-//    if(e.keyCode == keyClick[0]) {
-//       mySith.animate({marginLeft: "`${i}`100px"});
-//    }
-// });
-
-// var myJedi = $('#obi-wan');
-//     $(document).bind('keydown',function(e){
-//        if(e.keyCode == keyClick[1]) {
-//           myJedi.animate({marginLeft: "100px"});
-//        }
-//     });
-
-// var clickA = $(document).bind('keydown',function(e){
-//        if(e.keyCode == 65) {
-//           myJedi.animate({marginLeft: "100px"});
-//        }});
-// return clickA
-
+// $('#x-wing').animate("slow","linear");
 
 let isStart = false;
 $(".start").on("click", function() {
@@ -72,32 +43,18 @@ $(document).bind('keydown',function(pressA){
         }
   }  
 });
+}});
 
+// $("body").onload(function() {
+  
+// });
 
-
-  }
-
-
-
-})
-
-
-
-
-
-// if ($("#darth-maul").css("marginLeft") === ("1300px")) {
-//   alert("Turned to the dark side");
-// }
-
-
-
-
-
-
-
-
-
-
+$(".start").on("click", function() {
+  $("#x-wing").animate({marginRight: "1800px"});
+  $("#x-wing").fadeIn();
+  $("#x-wing").animate({"margin-left":"1500px"}, 3000, "swing", function() {
+      $("#x-wing").animate({"margin-left":"0px"}, 2000, "swing", function(){
+              console.log("avengers assemble");})})});
 
 
 
